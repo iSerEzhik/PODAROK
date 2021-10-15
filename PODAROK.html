@@ -17,8 +17,6 @@
     </script>
     <title>С днём рождения!!!</title>
     <style>
-       
-
         body {
             max-width: 100%;
             background-image: url(https://images.wallpaperscraft.ru/image/single/gora_zima_sneg_133302_1920x1080.jpg);
@@ -38,23 +36,28 @@
 
         #changeOrientation {
             display: inline-block;
-            width: 100%;
-            height: 100%;
-            max-width: 100%;
+            /* max-width: 100%; */
             background-size: 100%;
             pointer-events: none;
-            background-color: rgba(0, 0, 0, 0.527);
+            background-color: rgb(0, 0, 0);
             position: absolute;
             top: 0px;
         }
 
-        #changeOrientation * {
+        #container{
+            margin-top: 0;
+            margin-left: 0;
+            display: block;
+        }
+
+        #container *{
             margin-left: auto;
             margin-right: auto;
+            text-align: center;
             display: flex;
             justify-content: center;
         }
-        
+
         #play-music,
         #arrow,
         .icon-containter,
@@ -87,18 +90,18 @@
             align-items: center;
         }
 
-        .our-moments{
+        .our-moments {
             margin-top: 50%
         }
 
-        .our-moment-text{
+        .our-moment-text {
             padding: 0.5%;
             background-color: rgb(66, 214, 133);
             font-size: 24px;
             font-weight: 1000;
             -webkit-text-fill-color: transparent;
             -webkit-background-clip: text;
-            margin-top: auto; 
+            margin-top: auto;
             margin-bottom: auto;
         }
 
@@ -141,6 +144,36 @@
                 background-position: 0% 50%
             }
         }
+
+        .timer__items {
+            display: flex;
+            font-size: 48px;
+        }
+
+        .timer__item {
+            position: relative;
+            min-width: 60px;
+            margin-left: 10px;
+            margin-right: 10px;
+            padding-bottom: 15px;
+            text-align: center;
+        }
+
+        .timer__item::before {
+            content: attr(data-title);
+            display: block;
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            font-size: 14px;
+        }
+
+        .timer__item:not(:last-child)::after {
+            content: ':';
+            position: absolute;
+            right: -15px;
+        }
     </style>
 </head>
 
@@ -174,7 +207,8 @@
                         <div class="slider__item">
                             <!-- Контент 1 слайда -->
                             <div class="container row">
-                                <img class="col-8" src="https://lh3.googleusercontent.com/pw/AM-JKLU1wmD7L-WnUJ6uSPiTsZ-wKZz3sGWCbOHjPSnEYriQB6YABvldICvgdrV0v9udrxfuJv8CF9hDbcMAdLOyV25I5Sv64wzT31nIve9y573c0hRJ0ekda0fEZn4HQzV22l0uPlzHYXbyxSqm3lbx2H-UlQ=w1099-h1463-no?authuser=0">
+                                <img class="col-8"
+                                    src="https://lh3.googleusercontent.com/pw/AM-JKLU1wmD7L-WnUJ6uSPiTsZ-wKZz3sGWCbOHjPSnEYriQB6YABvldICvgdrV0v9udrxfuJv8CF9hDbcMAdLOyV25I5Sv64wzT31nIve9y573c0hRJ0ekda0fEZn4HQzV22l0uPlzHYXbyxSqm3lbx2H-UlQ=w1099-h1463-no?authuser=0">
                                 <div class="our-moment-text col-4">
                                     Тебе покорятся любые вершины!
                                 </div>
@@ -183,7 +217,8 @@
                         <div class="slider__item">
                             <!-- Контент 2 слайда -->
                             <div class="container row">
-                                <img class="col-8" src="https://lh3.googleusercontent.com/pw/AM-JKLVV2BYgZHt2nmPhVx_Gz6jmhxEqOyTjqwaOQuet1P5vVsFOKHwzP57KsAst4i4nk3woq8yCU-1lNqB6i_wPefHTfy3IHzKzqPrcV3Hp3fdQ-jaNZC2iiW9d8irQVX8LLgEnYgRzPCOPA9wtqcJ5YPRh=w1952-h1463-no?authuser=0">
+                                <img class="col-8"
+                                    src="https://lh3.googleusercontent.com/pw/AM-JKLVV2BYgZHt2nmPhVx_Gz6jmhxEqOyTjqwaOQuet1P5vVsFOKHwzP57KsAst4i4nk3woq8yCU-1lNqB6i_wPefHTfy3IHzKzqPrcV3Hp3fdQ-jaNZC2iiW9d8irQVX8LLgEnYgRzPCOPA9wtqcJ5YPRh=w1952-h1463-no?authuser=0">
                                 <div class="our-moment-text col-4">
                                     Оставайся, всегда весёлой и жизнерадостной
                                 </div>
@@ -192,7 +227,7 @@
                         <div class="slider__item">
                             <!-- Контент 3 слайда -->
                             <div class="container row">
-                                <img class="col-8" src="https://i.ibb.co/2K9HT0P/photo-2021-10-16-00-08-37.jpg">
+                                <img class="col-8" src="https://i.ibb.co/Syw2CQT/photo-2021-10-16-00-27-43.jpg">
                                 <div class="our-moment-text col-4">
                                     Ни на что не променяю наши совместные полежалки
                                 </div>
@@ -201,7 +236,7 @@
                         <div class="slider__item">
                             <!-- Контент 4 слайда -->
                             <div class="container row">
-                                <img class="col-8" src="https://i.ibb.co/VJ4QHjm/photo-2021-10-16-00-08-26.jpg">
+                                <img class="col-8" src="https://i.ibb.co/1MYp7n5/photo-2021-10-16-00-27-46.jpg">
                                 <div class="our-moment-text col-4">
                                     Ты прекрасна, даже когда за окном ненастье
                                 </div>
@@ -210,7 +245,7 @@
                         <div class="slider__item">
                             <!-- Контент 5 слайда -->
                             <div class="container row">
-                                <img class="col-8" src="https://i.ibb.co/tKSb2wH/photo-2021-10-16-00-08-40.jpg">
+                                <img class="col-8" src="https://i.ibb.co/h1kfNKv/photo-2021-10-16-00-27-39.jpg">
                                 <div class="our-moment-text col-4">
                                     Наши вечерние разговоры...<br>
                                     О высоком и ни о чём &#129505;
@@ -222,7 +257,7 @@
                             <div class="container row">
                                 <img class="col-8" src="https://acegif.com/wp-content/uploads/gif-heart-51.gif">
                                 <div class="our-moment-text col-4">
-                                    Я считаю, эти моменты никогда не закончатся и они навсегда останутся в моём сердце
+                                    Давай будем добавлять сюда наши моменты, пока нам не надоест
                                 </div>
                             </div>
                         </div>
@@ -244,20 +279,74 @@
             </div> -->
         </div>
     </div>
-    <div id="timer row">
-        <script>
-
-        </script>
+    <div class="row col-4" style="margin-left: auto; margin-right: auto; margin-top:20%">
+        <p style="color: red; font-weight: 1000; font-size: 64px; text-align: center;">До заслуженного отдыха!!</p>
+        <img src="https://i.gifer.com/JFi.gif" alt="">
+    </div>
+    <div class="timer">
+        <div class="timer__items" style="background-color: white; width: fit-content; margin-top: 30px; margin-left: auto; margin-right: auto; margin-bottom: 75px;">
+            <div class="timer__item timer__days">00</div>
+            <div class="timer__item timer__hours">00</div>
+            <div class="timer__item timer__minutes">00</div>
+            <div class="timer__item timer__seconds">00</div>
+          </div>
     </div>
     </div>
-
 
 
     <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // конечная дата
+            const deadline = new Date(2022, 0, 23, 6, 35);
+            // id таймера
+            let timerId = null;
+            // склонение числительных
+            function declensionNum(num, words) {
+                return words[(num % 100 > 4 && num % 100 < 20) ? 2 : [2, 0, 1, 1, 1, 2][(num % 10 < 5) ? num % 10 : 5]];
+            }
+            // вычисляем разницу дат и устанавливаем оставшееся времени в качестве содержимого элементов
+            function countdownTimer() {
+                const diff = deadline - new Date();
+                if (diff <= 0) {
+                    clearInterval(timerId);
+                }
+                const days = diff > 0 ? Math.floor(diff / 1000 / 60 / 60 / 24) : 0;
+                const hours = diff > 0 ? Math.floor(diff / 1000 / 60 / 60) % 24 : 0;
+                const minutes = diff > 0 ? Math.floor(diff / 1000 / 60) % 60 : 0;
+                const seconds = diff > 0 ? Math.floor(diff / 1000) % 60 : 0;
+                $days.textContent = days < 10 ? '0' + days : days;
+                $hours.textContent = hours < 10 ? '0' + hours : hours;
+                $minutes.textContent = minutes < 10 ? '0' + minutes : minutes;
+                $seconds.textContent = seconds < 10 ? '0' + seconds : seconds;
+                $days.dataset.title = declensionNum(days, ['день', 'дня', 'дней']);
+                $hours.dataset.title = declensionNum(hours, ['час', 'часа', 'часов']);
+                $minutes.dataset.title = declensionNum(minutes, ['минута', 'минуты', 'минут']);
+                $seconds.dataset.title = declensionNum(seconds, ['секунда', 'секунды', 'секунд']);
+            }
+            // получаем элементы, содержащие компоненты даты
+            const $days = document.querySelector('.timer__days');
+            const $hours = document.querySelector('.timer__hours');
+            const $minutes = document.querySelector('.timer__minutes');
+            const $seconds = document.querySelector('.timer__seconds');
+            // вызываем функцию countdownTimer
+            countdownTimer();
+            // вызываем функцию countdownTimer каждую секунду
+            timerId = setInterval(countdownTimer, 1000);
+        });
+    </script>
+    <script>
         window.onorientationchange = () => {
+            console.log(document.body.clientWidth ,document.body.clientHeight)
             if (Math.abs(this.orientation / 90) != 1) {
                 let image = document.createElement('div');
                 image.id = 'changeOrientation';
+                image.style.height = document.body.clientHeight;
+                image.style.width = document.body.clientWidth;
+                let container = document.createElement('div');
+                container.id='container';
+                
+                container.setAttribute('width',screen.availWidth);
+                container.setAttribute('height',screen.availHeight);
                 let icon = document.createElement('img');
                 icon.id = 'switch';
                 icon.setAttribute('src', 'https://cdn-icons-png.flaticon.com/128/2313/2313593.png');
@@ -265,8 +354,9 @@
                 icon.setAttribute('height', '128');
                 icon.setAttribute('alt', 'Не отображается');
                 icon.setAttribute('style', 'margin-top:50%')
-                image.append(icon);
-                image.innerHTML += '<p style=\"color:white\">Переверни телефон, так лучше отображается</p>';
+                container.append(icon);
+                container.innerHTML += '<p style=\"color:white\">Переверни телефон, так лучше отображается</p>';
+                image.append(container)
                 document.body.append(image);
                 document.body.style.pointerEvents = 'none';
             } else {
@@ -279,7 +369,6 @@
         let music = document.getElementById('music-src');
         music.volume = 0.1;
         document.fullscreen = true;
-
 
     </script>
 </body>
