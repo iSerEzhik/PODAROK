@@ -115,12 +115,26 @@
 }
 
 .slider__item {
-    flex: 0 0 50%;
-    max-width: 50%;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    counter-increment: slide;
     height: 250px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 7rem;
+    position: relative;
 }
+
+.slider__items {
+    counter-reset: slide;
+}
+.slider__item::before {
+    content: counter(slide) "/∞";
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #fff;
+    font-style: italic;
+    font-size: 32px;
+    font-weight: bold;
+    display: block;
+  }
