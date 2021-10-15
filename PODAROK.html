@@ -1,0 +1,287 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="height=device-height,width=device-width" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="C:\Users\kreto\Desktop\PODAROK\chiefSlider.css">
+    <script defer src="https://iserezhik.github.io/PODAROK/chiefSlider.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const slider = new ChiefSlider('.slider', {
+                loop: true
+            });
+        });
+    </script>
+    <title>С днём рождения!!!</title>
+    <style>
+       
+
+        body {
+            max-width: 100%;
+            background-image: url(https://images.wallpaperscraft.ru/image/single/gora_zima_sneg_133302_1920x1080.jpg);
+            background-size: 100%;
+            margin: 0px;
+        }
+
+        header {
+            margin-top: 30px;
+            margin-bottom: 50px;
+            text-shadow: 1px 0 1px rgba(0, 0, 0, 0.336),
+                0 1px 1px rgba(0, 0, 0, 0.336),
+                -1px 0 1px rgba(0, 0, 0, 0.336),
+                0 -1px 1px rgba(0, 0, 0, 0.336);
+            ;
+        }
+
+        #changeOrientation {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            max-width: 100%;
+            background-size: 100%;
+            pointer-events: none;
+            background-color: rgba(0, 0, 0, 0.527);
+            position: absolute;
+            top: 0px;
+        }
+
+        #changeOrientation * {
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            justify-content: center;
+        }
+        
+        #play-music,
+        #arrow,
+        .icon-containter,
+        .play-music-btn,
+        .rainbow-animated::before {
+            display: block;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: rgb(158, 7, 172);
+            text-shadow: 1px 0 1px rgba(0, 0, 0, 0.336),
+                0 1px 1px rgba(0, 0, 0, 0.336),
+                -1px 0 1px rgba(0, 0, 0, 0.336),
+                0 -1px 1px rgba(0, 0, 0, 0.336);
+        }
+
+        #arrow {
+            height: 128px;
+        }
+
+        #play-music {
+            size: 256px;
+            border-radius: 8px;
+            background: rgba(0, 0, 0, 0.514);
+            border: 4px solid rgba(245, 131, 0, 0.747);
+            text-align: center;
+            align-items: center;
+        }
+
+        .our-moments{
+            margin-top: 50%
+        }
+
+        .our-moment-text{
+            padding: 0.5%;
+            background-color: rgb(66, 214, 133);
+            font-size: 24px;
+            font-weight: 1000;
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            margin-top: auto; 
+            margin-bottom: auto;
+        }
+
+        .rainbow-animated {
+            font-weight: 1000;
+            background: linear-gradient(to right, red, orange, yellow, green, cyan, blue, violet);
+            background-size: 400% 400%;
+            font-size: 30px;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -webkit-animation: rainbow 10s ease infinite;
+            animation: rainbow 10s ease infinite;
+        }
+
+
+        @-webkit-keyframes rainbow {
+            0% {
+                background-position: 0% 50%
+            }
+
+            50% {
+                background-position: 100% 50%
+            }
+
+            100% {
+                background-position: 0% 50%
+            }
+        }
+
+        @keyframes rainbow {
+            0% {
+                background-position: 0% 50%
+            }
+
+            50% {
+                background-position: 100% 50%
+            }
+
+            100% {
+                background-position: 0% 50%
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <header>
+        <h1 data-text="С днём рождения, любимая моя!!!">С
+            днём рождения, любимая моя!!!</h1>
+    </header>
+
+    <div class="container">
+        <div class="row col-4 icon-containter">
+            <audio
+                src="https://ru.drivemusic.me/dl/mn1kfOG8V34G3PdI8g3whA/1633894027/download_music/2016/06/trofim-gorod-sochi.mp3"
+                id="music-src" preload="auto" type='media/mpeg'>
+                Тег не поддерживается
+            </audio>
+            <img src="https://img.icons8.com/nolan/256/long-arrow-down--v2.png" alt="Картинка">
+        </div>
+        <div class="row col-4 play-music-btn">
+            <button id='play-music' type="button" onclick="music.play()">
+                <p class="rainbow-animated" data-text="Включить музыку">Включить музыку</p>
+            </button>
+        </div>
+
+        <div class="our-moments row">
+            <div class="slider">
+                <div class="slider__wrapper">
+                    <div class="slider__items">
+                        <div class="slider__item">
+                            <!-- Контент 1 слайда -->
+                            <div class="container row">
+                                <img class="col-8" src="https://lh3.googleusercontent.com/pw/AM-JKLU1wmD7L-WnUJ6uSPiTsZ-wKZz3sGWCbOHjPSnEYriQB6YABvldICvgdrV0v9udrxfuJv8CF9hDbcMAdLOyV25I5Sv64wzT31nIve9y573c0hRJ0ekda0fEZn4HQzV22l0uPlzHYXbyxSqm3lbx2H-UlQ=w1099-h1463-no?authuser=0">
+                                <div class="our-moment-text col-4">
+                                    Тебе покорятся любые вершины!
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider__item">
+                            <!-- Контент 2 слайда -->
+                            <div class="container row">
+                                <img class="col-8" src="https://lh3.googleusercontent.com/pw/AM-JKLVV2BYgZHt2nmPhVx_Gz6jmhxEqOyTjqwaOQuet1P5vVsFOKHwzP57KsAst4i4nk3woq8yCU-1lNqB6i_wPefHTfy3IHzKzqPrcV3Hp3fdQ-jaNZC2iiW9d8irQVX8LLgEnYgRzPCOPA9wtqcJ5YPRh=w1952-h1463-no?authuser=0">
+                                <div class="our-moment-text col-4">
+                                    Оставайся, всегда весёлой и жизнерадостной
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider__item">
+                            <!-- Контент 3 слайда -->
+                            <div class="container row">
+                                <img class="col-8" src="https://i.ibb.co/2K9HT0P/photo-2021-10-16-00-08-37.jpg">
+                                <div class="our-moment-text col-4">
+                                    Ни на что не променяю наши совместные полежалки
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider__item">
+                            <!-- Контент 4 слайда -->
+                            <div class="container row">
+                                <img class="col-8" src="https://i.ibb.co/VJ4QHjm/photo-2021-10-16-00-08-26.jpg">
+                                <div class="our-moment-text col-4">
+                                    Ты прекрасна, даже когда за окном ненастье
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider__item">
+                            <!-- Контент 5 слайда -->
+                            <div class="container row">
+                                <img class="col-8" src="https://i.ibb.co/tKSb2wH/photo-2021-10-16-00-08-40.jpg">
+                                <div class="our-moment-text col-4">
+                                    Наши вечерние разговоры...<br>
+                                    О высоком и ни о чём &#129505;
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider__item">
+                            <!-- Контент 6 слайда -->
+                            <div class="container row">
+                                <img class="col-8" src="https://acegif.com/wp-content/uploads/gif-heart-51.gif">
+                                <div class="our-moment-text col-4">
+                                    Я считаю, эти моменты никогда не закончатся и они навсегда останутся в моём сердце
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="slider__control" data-slide="prev"></a>
+                <a href="#" class="slider__control" data-slide="next"></a>
+                <ol class="slider__indicators">
+                    <li data-slide-to="0"></li>
+                    <li data-slide-to="1"></li>
+                    <li data-slide-to="2"></li>
+                    <li data-slide-to="3"></li>
+                    <li data-slide-to="4"></li>
+                    <li data-slide-to="5"></li>
+                </ol>
+            </div>
+            <!-- <div class="col-4" style="color: blue;">
+                <p>Какой-то текст</p>
+            </div> -->
+        </div>
+    </div>
+    <div id="timer row">
+        <script>
+
+        </script>
+    </div>
+    </div>
+
+
+
+    <script>
+        window.onorientationchange = () => {
+            if (Math.abs(this.orientation / 90) != 1) {
+                let image = document.createElement('div');
+                image.id = 'changeOrientation';
+                let icon = document.createElement('img');
+                icon.id = 'switch';
+                icon.setAttribute('src', 'https://cdn-icons-png.flaticon.com/128/2313/2313593.png');
+                icon.setAttribute('width', '128');
+                icon.setAttribute('height', '128');
+                icon.setAttribute('alt', 'Не отображается');
+                icon.setAttribute('style', 'margin-top:50%')
+                image.append(icon);
+                image.innerHTML += '<p style=\"color:white\">Переверни телефон, так лучше отображается</p>';
+                document.body.append(image);
+                document.body.style.pointerEvents = 'none';
+            } else {
+                document.querySelector('#changeOrientation')?.remove();
+                document.body.style.pointerEvents = 'all';
+            }
+        };
+        window.orientation = 90;
+        window.onorientationchange();
+        let music = document.getElementById('music-src');
+        music.volume = 0.1;
+        document.fullscreen = true;
+
+
+    </script>
+</body>
+
+</html>
